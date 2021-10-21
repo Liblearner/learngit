@@ -230,7 +230,53 @@ To github.com:Liblearner/learngit.git
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 从今往后可以用命令`git push origin master`这个命令的最新修改推送至github。
+
+![image-20211021165610446](image-20211021165610446.png)
+
+这就是上传文件之后的结果啦。
+
+### 3.删除库
+`git remote rm origin`
+此命令是解除了本地库和远程库的连接，要真正删除远程库要在github'网站上操作。
+操作的合集：
+```
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+
+关联一个远程库时必须给远程库指定一个名字，origin是默认习惯命名；
+
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+```
+
 ## 四.从github的库中提取代码
+
 ## 五.提交（push）与获取代码（pull）
+### 1.从远程库克隆，从而建立本地库
+
+建立的新库的名字是：gitskills
+勾选 Initialize this repository with a README，github会自动创建一个README文件。
+用命令`git clone`建立本地库
+```
+$ git clone git@github.com:Liblearner/gitskills.git
+Cloning into 'gitskills'...
+warning: You appear to have cloned an empty repository.
+```
+github支持多种协议的地址连接。目前使用这种就好啦，详细教程可以以后探索。
+### 2.如何获取代码
+这部分的内容应该就是说要从别人的库里粘贴代码下载到本地？从CSDN上找到了教程，搜索后在别人的库里找到地址之后同样使用命令`git clone`即可
+```
+$ git clone git@github.com:getlantern/download.git
+Cloning into 'download'...
+remote: Enumerating objects: 94, done.
+remote: Total 94 (delta 0), reused 0 (delta 0), pack-reused 94
+Receiving objects: 100% (94/94), 24.43 KiB | 201.00 KiB/s, done.
+Resolving deltas: 100% (29/29), done.
+
+```
+这样就把代码拷到本地啦（虽然第一次资料是乱找的）。
+
+由于时间原因，优先完成其他任务啦，下面的内容之后再学。
+
 ## 六.创建分支和合并分支
 ## 七.如何多人协作
